@@ -7,6 +7,6 @@ class Types(models.Model):
     options_sinal = [("+", "-")]
     
     type = models.IntegerField()
-    description = models.CharField()
-    nature = models.CharField(choices=options_nature, default="Entrada")
-    sinal = models.CharField(choices=options_sinal, default="+")
+    description = models.CharField(max_length=50)
+    nature = models.CharField(max_length=8, choices=options_nature, default="Entrada")
+    sinal = models.CharField(max_length=2,choices=options_sinal, default="+")

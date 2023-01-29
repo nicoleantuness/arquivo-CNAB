@@ -1,15 +1,16 @@
 from rest_framework import serializers
 from .models import Types
+import ipdb
 
 class TypesSerializer(serializers.Serializer):
-    type = serializers.CharField()
-    description = serializers.CharField()
-    nature = serializers.CharField(choices=Types.options_nature, default="Entrada")
-    sinal = serializers.CharField(choices=Types.options_sinal, default="+")
+    type = serializers.IntegerField()
+    description = serializers.CharField(max_length=50)
+    nature = serializers.ChoiceField(choices=Types.options_nature, default="Entrada")
+    sinal = serializers.ChoiceField(choices=Types.options_sinal, default="+")
 
-
+    
+    
     def create(self, validated_data):
-        type = Types.objects.create(**validated_data)
-
-        return type
+        # ipdb.set_trace()
+        return Types.objects.create(**validated_data)
     
