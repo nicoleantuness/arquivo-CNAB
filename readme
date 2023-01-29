@@ -1,0 +1,5 @@
+Convertor de arquivo CNAB
+O projeto converte arquivos CNAB 
+
+Tecnologias usadas: 
+Django Rest Framework, Python e SQLite3

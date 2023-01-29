@@ -3,10 +3,11 @@ from django.db import models
 # Create your models here.
 
 class Types(models.Model):
-    options_nature = [("Entrada", "Saída")]
-    options_sinal = [("+", "-")]
-    
     type = models.IntegerField()
-    description = models.CharField(max_length=50)
-    nature = models.CharField(max_length=8, choices=options_nature, default="Entrada")
-    sinal = models.CharField(max_length=2,choices=options_sinal, default="+")
+    date = models.DateTimeField()
+    value = models.DecimalField(max_digits=12, decimal_places=2)
+    cpf = models.CharField(max_length=11)
+    card = models.CharField(max_length=20)
+    hour = models.TimeField()
+    owner_store = models.CharField(max_length=20)
+    store_name = models.CharField(max_length=20)
