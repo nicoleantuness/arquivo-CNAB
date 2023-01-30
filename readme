@@ -1,4 +1,7 @@
 Convertor de arquivo CNAB
+
+É uma interface web que aceita upload do arquivo CNAB, normalizando os dados e armazenando em um banco de dados relacional e exibindo essas informações em tela. 
+
 O projeto converte arquivos CNAB 
 
 Tecnologias usadas: 

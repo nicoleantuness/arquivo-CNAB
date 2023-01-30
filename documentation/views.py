@@ -20,8 +20,6 @@ class TypesView(APIView):
 
         serializer = TypesSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        # ipdb.set_trace()
-
         serializer.save()
 
         return Response(serializer.data, status.HTTP_201_CREATED)
